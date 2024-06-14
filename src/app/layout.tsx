@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeRegistry from "./components/ThemeRegistry";
+import { TermsProvider } from "@/context/TermsContext";
 
 
 export const metadata: Metadata = {
@@ -17,11 +18,14 @@ export default function RootLayout({
     <html lang="en">
       {/* We need to provide  Theme to everyone */}
       <body>
-      <ThemeRegistry>
-        {children}
-      </ThemeRegistry>
+        <TermsProvider>
+          <ThemeRegistry>
+            {children}
+          </ThemeRegistry>
+        </TermsProvider>
+
       </body>
-     
+
     </html>
   );
 }

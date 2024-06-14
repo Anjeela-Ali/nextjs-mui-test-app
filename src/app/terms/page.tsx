@@ -16,12 +16,14 @@ import {
 import MainButton from '../components/MainButton';
 import { Router } from 'next/router';
 import { useRouter } from 'next/navigation';
+import { useTerms } from '@/context/TermsContext';
 
 const TermsAndConditions = () => {
     const router = useRouter();
   const [open, setOpen] = useState(true);
   const [checkedTerms, setCheckedTerms] = useState(false);
   const [checkedPrivacy, setCheckedPrivacy] = useState(false);
+  const {setTermsAccepted} = useTerms()
 
   const handleCheckboxChangeTerms = (event:any) => {
     setCheckedTerms(event.target.checked);
@@ -33,6 +35,7 @@ const TermsAndConditions = () => {
 
   const handleClose = () => {
     if (checkedTerms && checkedPrivacy) {
+        setTermsAccepted(true);
         setOpen(false);
         // Navigate to another page
         router.push('/home');

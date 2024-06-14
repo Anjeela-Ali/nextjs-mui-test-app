@@ -5,28 +5,35 @@ import { Typography, CssBaseline, Container } from "@mui/material";
 import { useRouter } from "next/navigation";
 import MainButton from '../components/MainButton';
 import ProfileCard from '../components/UserProfile';
+import { useTerms } from '@/context/TermsContext';
 
 const HomePage = () => {
   const router = useRouter();
+  const {termsAccepted} = useTerms();
 
   const handleButtonClick = () => {
-    router.push('/terms')
+    if(termsAccepted){
+      router.push('/terms')
+    }else{
+      router.push('/terms')
+    }
+    
   }
 
   return (
     <>
        <CssBaseline />
       <Container>
-        <ProfileCard name='John'/>
+      {termsAccepted && <ProfileCard name="John Doe" />}
         <Typography variant="h4" sx={{
           color: 'text.secondary',
         }}>
           Hello, MUI Theme!
         </Typography>
-        <MainButton title="Connect" onButtonClick={handleButtonClick} disabled/>
+        <MainButton title= {termsAccepted ? 'Dashboard' : 'Continue'} onButtonClick={handleButtonClick} disabled/>
       </Container>
     </>
   )
 }
 
-export default HomePage
+export default HomePage;
