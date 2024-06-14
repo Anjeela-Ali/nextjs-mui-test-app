@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const handleButtonClick = () => {
     if(termsAccepted){
-      router.push('/terms')
+      router.push('/dashboard')
     }else{
       router.push('/terms')
     }
