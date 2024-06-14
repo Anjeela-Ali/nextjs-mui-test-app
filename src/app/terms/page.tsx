@@ -13,7 +13,7 @@ import {
   DialogContent,
   DialogActions
 } from '@mui/material';
-import MainButton from '../components/MainButton';
+import MainButton from '../(components)/MainButton';
 import { Router } from 'next/router';
 import { useRouter } from 'next/navigation';
 import { useTerms } from '@/context/TermsContext';

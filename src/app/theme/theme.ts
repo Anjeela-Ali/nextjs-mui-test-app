@@ -56,6 +56,7 @@ export const theme = createTheme({
           padding: '2px 20px',
           border: `1px solid  ${Colors.text.secondary}`,
           borderRadius:'50px', 
+        
         }
       }
     }

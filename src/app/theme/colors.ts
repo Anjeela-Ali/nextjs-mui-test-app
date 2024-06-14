@@ -9,11 +9,12 @@ export const Colors = {
       },
       background: {
         default: '#001828',  // Background color
-        paper: '#011F30',    // Paper background color
+        paper: '#20313C',    // Paper background color
       },
       text: {
         primary: '#FFFFFF',  // Primary text color
         secondary: '#FFE420', // Secondary text color
+        para:"#EFEFEF"
       },
       
 }
