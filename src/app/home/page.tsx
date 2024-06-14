@@ -9,28 +9,28 @@ import { useTerms } from '@/context/TermsContext';
 
 const HomePage = () => {
   const router = useRouter();
-  const {termsAccepted} = useTerms();
-
+  const { termsAccepted } = useTerms();
   const handleButtonClick = () => {
-    if(termsAccepted){
+    if (termsAccepted) {
       router.push('/dashboard')
-    }else{
+    } else {
       router.push('/terms')
     }
-    
+
   }
 
   return (
     <>
-       <CssBaseline />
+      <CssBaseline />
       <Container>
-      {termsAccepted && <ProfileCard name="John Doe" />}
+        {termsAccepted && <ProfileCard name="John Doe" />}
         <Typography variant="h4" sx={{
           color: 'text.secondary',
+          fontFamily: 'Basement Grotesque'
         }}>
           Hello, MUI Theme!
         </Typography>
-        <MainButton title= {termsAccepted ? 'Dashboard' : 'Continue'} onButtonClick={handleButtonClick} disabled/>
+        <MainButton title={termsAccepted ? 'Dashboard' : 'Continue'} onButtonClick={handleButtonClick} disabled />
       </Container>
     </>
   )

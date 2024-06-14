@@ -16,7 +16,15 @@
   }
 }
 
+@font-face {
+  font-family: 'Basement Grotesque';
+  src: url('/fonts/BasementGrotesque.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Basement Grotesque', sans-serif;
   color: rgb(var(--foreground-rgb));
 
 }
