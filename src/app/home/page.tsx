@@ -1,6 +1,7 @@
 
 'use client'
 
+import { Box } from "@mui/material";
 import Footer from "../(components)/Footer";
 import Automated from "./ui/Automated";
 import HeroSection from "./ui/HeroSection";
@@ -13,11 +14,14 @@ const ThreeDWave = dynamic(() => import('./ui/ThreeDWave'), { ssr: false });
 const HomePage = () => {
 
   return (
-    <>      
+    <>
       <HeroSection />
-      <RateSection  />
+      <RateSection />
       <Automated />
-      <ThreeDWave />
+      <Box sx={{  height:'60vh' }}>
+        <ThreeDWave />
+      </Box>
+
       <Footer />
     </>
   )
