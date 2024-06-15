@@ -14,7 +14,7 @@ export default function MediaCard({
     description:string
 }) {
   return (
-    <Card sx={{ maxWidth: 345, borderRadius:'20px', background:'' }}>
+    <Card sx={{ maxWidth: 345, borderRadius:'20px', boxShadow:'-1px 0px 32px #060606' }}>
       <CardMedia
         sx={{ height: 240, margin:'10px', borderRadius:'20px'}}
         image="/card.png"

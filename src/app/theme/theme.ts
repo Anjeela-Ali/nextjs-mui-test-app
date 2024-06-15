@@ -54,7 +54,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           padding: '2px 20px',
-          border: `1px solid  ${Colors.text.secondary}`,
+          border: `2px solid  ${Colors.text.secondary}`,
           borderRadius:'50px', 
         
         }

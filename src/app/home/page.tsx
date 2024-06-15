@@ -2,6 +2,7 @@
 'use client'
 
 import HeroSection from "./ui/HeroSection";
+import RateSection from "./ui/Rate";
 
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
   return (
     <>      
       <HeroSection />
+      <RateSection />
     </>
   )
 }

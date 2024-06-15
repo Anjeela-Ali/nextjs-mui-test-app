@@ -13,6 +13,9 @@ const MainButtonComponent = styled(Button, {
         textTransform: 'capitalize',
         fontSize:'18px',
         fontWeight:'normal',
+        width:'150px',
+        height:'38px',
+        lineHeight:'28px'
 }))
 const MainButton = ({
   title,
