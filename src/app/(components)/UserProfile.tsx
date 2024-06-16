@@ -19,7 +19,6 @@ const StyledCard = styled(Card)({
 
 const StyledCardContent = styled(CardContent)({
   paddingTop:'17px',
-  fontFamily: 'Basement Grotesque',
 
 });
 
@@ -62,7 +61,11 @@ const ProfileCard = ({ name, address }: { name: string, address: string }) => {
         </Box>
         
         <StyledCardContent>
-          <Typography variant="body1" component="div">
+          <Typography variant="body1" component="div" sx={{
+
+  fontFamily: 'Basement Grotesque',
+  fontWeight:'light'
+          }}>
             {name}
           </Typography>
           <AddressText variant="body2">
