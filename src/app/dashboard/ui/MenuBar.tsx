@@ -4,23 +4,30 @@ import { FaEthereum } from "react-icons/fa6";
 
 import { IoTicketOutline } from "react-icons/io5";
 import { IoDiamondOutline } from "react-icons/io5";
-
+import { IoWalletOutline, IoLogOutOutline } from 'react-icons/io5';
+import Image from 'next/image';
 
 const MenuBar = () => {
-    const [value, setValue] = useState('');
+    const [ethValue, setEthValue] = useState('');
+    const [profileValue, setProfileValue] = useState('');
 
-    const handleChange = (event: any) => {
-        setValue(event.target.value);
+    const handleEthChange = (event:any) => {
+        setEthValue(event.target.value);
     };
+
+    const handleProfileChange = (event:any) => {
+        setProfileValue(event.target.value);
+    };
+
+
 
     return (
         <Container>
             <Box sx={{
-                border: '1px solid red',
                 display: 'flex',
                 justifyContent: 'right',
-                marginTop:'15px',
-                marginBottom:'60px'
+                marginTop: '15px',
+                marginBottom: '60px'
             }}>
                 <FormControl sx={{
                     m: 1, minWidth: 170, border: '1px solid #10344c', background: '#061F30', borderRadius: '12px', overflow: 'hidden',
@@ -30,8 +37,8 @@ const MenuBar = () => {
 
                 }}>
                     <Select
-                        value={value}
-                        onChange={handleChange}
+                        value={ethValue}
+                        onChange={handleEthChange}
                         inputProps={{ 'aria-label': 'Without label' }}
                         displayEmpty
                         sx={{
@@ -127,9 +134,9 @@ const MenuBar = () => {
                 }}>
                     <Box sx={{
                         color: '#FF351A',
-                        paddingTop: '10px',
-                        paddingLeft: '10px',
-                        paddingRight: '10px',
+                        paddingTop: '13px',
+                        paddingLeft: '13px',
+                        paddingRight: '13px',
                         // border:'1px solid #ff351a8c',
                         borderRadius: '100px',
                         backgroundColor: '#ff351a8c',
@@ -144,12 +151,12 @@ const MenuBar = () => {
                             justifyContent: 'center',
                             width: '12px',
                             height: '12px',
-                            backgroundColor: '#FF351A', 
-                            borderRadius: '30%', 
+                            backgroundColor: '#FF351A',
+                            borderRadius: '30%',
                             position: 'absolute',
-                            bottom: '0', 
-                            right: '-3px', 
-                            color: '#000', 
+                            bottom: '0',
+                            right: '-3px',
+                            color: '#000',
                             fontSize: '12px',
                         },
                     }}>
@@ -176,9 +183,9 @@ const MenuBar = () => {
                 }}>
                     <Box sx={{
                         color: '#58FF69',
-                        paddingTop: '10px',
-                        paddingLeft: '10px',
-                        paddingRight: '10px',
+                        paddingTop: '13px',
+                        paddingLeft: '13px',
+                        paddingRight: '13px',
                         // border:'1px solid #ff351a8c',
                         borderRadius: '100px',
                         backgroundColor: '#58ff697a',
@@ -193,12 +200,12 @@ const MenuBar = () => {
                             justifyContent: 'center',
                             width: '12px',
                             height: '12px',
-                            backgroundColor: '#58FF69', 
-                            borderRadius: '30%', 
+                            backgroundColor: '#58FF69',
+                            borderRadius: '30%',
                             position: 'absolute',
-                            bottom: '0', 
-                            right: '-3px', 
-                            color: '#000', 
+                            bottom: '0',
+                            right: '-3px',
+                            color: '#000',
                             fontSize: '12px',
                         },
                     }}>
@@ -219,6 +226,73 @@ const MenuBar = () => {
                         }}>Diamonds</Typography>
                     </Box>
                 </Box>
+                {/* Profile */}
+                <FormControl sx={{
+                    m: 1, minWidth: 170, border: '1px solid #10344c', background: '#061F30', borderRadius: '50px', overflow: 'hidden',
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        border: 'transparent',
+                    },
+                }}>
+                    <Select
+                        value={profileValue}
+                        onChange={handleProfileChange}
+                        inputProps={{ 'aria-label': 'Without label' }}
+                        displayEmpty
+                        sx={{
+                            border: 'none',
+                            '.MuiSelect-icon': {
+                                color: '#fff',
+                            },
+                            '.MuiSelect-select': {
+                                display: 'flex',
+                                alignItems: 'center',
+                                color: '#fff',
+                                fontSize: '18px',
+                                padding: '8px 16px',
+                            },
+                        }}
+                    >
+                        <Box value="" sx={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            padding: '8px 16px',
+                        }}>
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}>
+                                <Image
+                                    src="/user.png" // Replace with the actual path to the profile image
+                                    alt="Profile"
+                                    width={100}
+                                    height={101}
+                                    style={{ width: '32px', height: '32px', borderRadius: '50%', marginRight: '8px' }}
+                                />
+                                <span>User Name</span>
+                            </Box>
+                        </Box>
+
+                        <MenuItem value="wallet">
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}>
+                                <IoWalletOutline style={{ color: '#7CA9FF', marginRight: '8px' }} />
+                                <span>Wallet</span>
+                            </Box>
+                        </MenuItem>
+                        <MenuItem value="logout">
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}>
+                                <IoLogOutOutline style={{ color: '#7CA9FF', marginRight: '8px' }} />
+                                <span>Logout</span>
+                            </Box>
+                        </MenuItem>
+                    </Select>
+                </FormControl>
             </Box>
         </Container>
     );

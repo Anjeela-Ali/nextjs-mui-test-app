@@ -96,12 +96,13 @@ export default function Dashboard(props: Props) {
           <Box sx={{
             display: 'flex',
             justifyContent: 'right',
-            border: '1px solid red',
+
+              marginBottom:'30px'
 
           }}>
             <IconButton sx={{
               color: 'gray',
-              fontSize: '32px'
+              fontSize: '32px',
             }}>
               <FaFacebook />
             </IconButton>
@@ -121,7 +122,7 @@ export default function Dashboard(props: Props) {
           <Box sx={{
             textAlign: 'right'
           }}>
-            <SunMoonSwitch />
+            {/* <SunMoonSwitch /> */}
           </Box>
 
 
