@@ -1,25 +1,29 @@
-import React from 'react'
-import { Typography, CssBaseline, Container, Box, Grid } from "@mui/material";
+import React, { useState } from 'react'
+import { Typography, CssBaseline, Container, Box, Grid, Modal } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useTerms } from '@/context/TermsContext';
 import Image from 'next/image';
 import ProfileCard from '@/app/(components)/UserProfile';
 import MainButton from '@/app/(components)/MainButton';
 import MediaCard from './Cards';
+import TermsAndConditions from '@/app/terms/page';
 
 
 
 const HeroSection = () => {
     const router = useRouter();
     const { termsAccepted } = useTerms();
+    const [open, setOpen] = useState(false);
     const handleButtonClick = () => {
         if (termsAccepted) {
             router.push('/dashboard')
         } else {
-            router.push('/terms')
+            setOpen(true)
         }
 
     }
+
+    const handleClose = () => setOpen(false);
 
     return (
         <div>
@@ -31,7 +35,7 @@ const HeroSection = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 justifyContent: 'center',
-                alignItems: 'center', 
+                alignItems: 'center',
                 height: '1035px'
             }}>
                 {/* Heroo section */}
@@ -77,7 +81,7 @@ const HeroSection = () => {
                     </Box>
 
                     {/* Cards */}
-                    <Box sx={{ padding: '78px 10px', marginTop:'50px'}}>
+                    <Box sx={{ padding: '78px 10px', marginTop: '50px' }}>
                         <Grid container spacing={4} justifyContent="center">
                             <Grid item xs={12} sm={6} md={4}>
                                 <MediaCard
@@ -102,6 +106,16 @@ const HeroSection = () => {
                         </Grid>
                     </Box>
                 </Container>
+                <Modal
+                
+                open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  
+                    >
+                    <TermsAndConditions />
+                </Modal>
             </Box>
         </div>
     )

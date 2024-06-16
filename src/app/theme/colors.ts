@@ -14,7 +14,7 @@ export const Colors = {
       text: {
         primary: '#FFFFFF',  // Primary text color
         secondary: '#FFE420', // Secondary text color
-        para:"#EFEFEF"
+        light:'#EFEFEF'
       },
       
 }
