@@ -42,7 +42,7 @@ const CountdownTimer = ({ initialSeconds }:{
                 justifyContent: 'center'
             }}>
                 Starting in {''}
-                <Box sx={{ color: timerStarted?'red':'yellow', paddingLeft:'10px' }}>
+                <Box sx={{ color: timerStarted ? 'red':'yellow', paddingLeft:'10px' }}>
                     {formatTime(seconds)}
                 </Box>
             </Box>
