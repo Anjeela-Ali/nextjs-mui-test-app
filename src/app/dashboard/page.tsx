@@ -30,7 +30,7 @@ import UpComingGames from './ui/UpComingGames';
 
 // Grid Responsiveness
 
-const drawerWidth = 240;
+const drawerWidth = 220;
 
 interface Props {
   /**
@@ -62,11 +62,12 @@ export default function Dashboard(props: Props) {
 
   const drawer = (
     <Box sx={{
-      backgroundColor: '#0a1929', // dark blue background color
-      height: '100vh', // full height of the viewport
+      backgroundColor: '#0a1929',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between', // space between top, middle, and bottom sections
+      justifyContent: 'space-between',
+      overflow: 'hidden'
     }}>
       <Box sx={{
         display: 'flex',
@@ -85,7 +86,7 @@ export default function Dashboard(props: Props) {
       }}>
         {['Home', 'Shop', 'Profile'].map((text) => (
           <ListItem key={text} sx={{
-            paddingLeft: '30px',
+            padding:'0px 30px',
             '&:hover': {
               color: 'text.secondary',
             },
@@ -101,24 +102,23 @@ export default function Dashboard(props: Props) {
       </List>
       <Box sx={{
         display: 'flex',
-        justifyContent: 'space-around',
-        padding: '10px',
-        borderTop: '1px solid #333', // optional: top border to separate from content
+        justifyContent:'right',
+        border:'1px solid red'
       }}>
         <IconButton sx={{
-          color: '#EFEFEF',
+          color: 'gray',
           fontSize: '32px'
         }}>
           <FaFacebook />
         </IconButton>
         <IconButton sx={{
-          color: '#EFEFEF',
+          color: 'gray',
           fontSize: '32px'
         }}>
           <AiFillInstagram />
         </IconButton>
         <IconButton sx={{
-          color: '#EFEFEF',
+          color: 'gray',
           fontSize: '32px'
         }}>
           <FaXTwitter />
@@ -158,9 +158,7 @@ export default function Dashboard(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
+          
         </Toolbar>
       </AppBar>
       <Box
@@ -225,7 +223,7 @@ export default function Dashboard(props: Props) {
             <Grid container spacing={2} columns={16} justifyContent='center' sx={{
               margin: '20px auto'
             }}>
-              <Grid xs={12} sm={8} lg={9} xl={10} sx={{
+              <Grid xs={12} sm={12} lg={9} xl={10} sx={{
               }}>
                 <Box sx={{
                   margin: '10px',
@@ -298,7 +296,7 @@ export default function Dashboard(props: Props) {
                   </List>
                 </Box>
               </Grid>
-              <Grid xs={12} sm={8} lg={7} xl={6} sx={{
+              <Grid xs={12} sm={12} lg={7} xl={6} sx={{
                 
                 paddingLeft:'30px',
                 paddingRight:'30'

@@ -3,14 +3,17 @@ import {Box, Typography, List, ListItem, Button,} from '@mui/material'
 import MainButton from '@/app/(components)/MainButton'
 
 
-const Card = () => {
+const Card = ({backgroundColor, boxShadow}:{
+    backgroundColor:string,
+    boxShadow:string
+}) => {
   return (
     <>
        <Box sx={{
-            backgroundColor: '#4299E1',
+            backgroundColor,
             padding: '6px 20px',
             borderRadius: '10px',
-            boxShadow: '#2778bb85 5px 3px, #226ba785 11px 6px, #195e971f 16px 8px',
+            boxShadow,
           }}>
             {/* Heading */}
             <Typography sx={{
@@ -43,7 +46,8 @@ const Card = () => {
                     fontSize:'14px',
                     textTransform:'capitalize',
                     color:'white',
-                    padding:'0px 10px'
+                    padding:'0px 10px',
+                    marginBottom:'20px'
                 }}>
                     Comming Soon
                 </Button>

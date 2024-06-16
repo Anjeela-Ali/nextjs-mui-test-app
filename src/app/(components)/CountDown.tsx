@@ -5,9 +5,11 @@ interface CountdownTimerProps {
     initialSeconds: number;
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialSeconds }) => {
+const CountdownTimer = ({ initialSeconds }:{
+    initialSeconds:number
+}) => {
     const [seconds, setSeconds] = useState(initialSeconds);
-
+    const [timerStarted, setTimerStarted] = useState(false);
     useEffect(() => {
         const timer = setInterval(() => {
             setSeconds((prevSeconds) => {
@@ -18,10 +20,13 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialSeconds }) => {
                     return 0;
                 }
             });
+            if (!timerStarted && initialSeconds - seconds >= 5) {
+                setTimerStarted(true);
+            }
         }, 1000);
 
         return () => clearInterval(timer);
-    }, []);
+    }, [initialSeconds, seconds, timerStarted]);
 
     const formatTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);
@@ -37,7 +42,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialSeconds }) => {
                 justifyContent: 'center'
             }}>
                 Starting in {''}
-                <Box sx={{ color: '#ffeb3b', paddingLeft:'10px' }}>
+                <Box sx={{ color: timerStarted?'red':'yellow', paddingLeft:'10px' }}>
                     {formatTime(seconds)}
                 </Box>
             </Box>
