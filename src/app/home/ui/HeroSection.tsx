@@ -44,7 +44,7 @@ const HeroSection = () => {
                     marginTop: '130px'
 
                 }}>
-                    {termsAccepted && <ProfileCard name="John Doe" />}
+                    {termsAccepted && <ProfileCard name="John Doe" address={'0x1cCD...4754'} />}
                     {/* Logo */}
                     <Image
                         src="/logo.png"

@@ -5,11 +5,17 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import MainButton from './MainButton';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 
 
 
 const Footer = () => {
+    const router = useRouter();
+
+    const handleButtonClick =()=>{
+        router.push('/')
+    }
     return (
         <>
         <Box>
@@ -31,9 +37,7 @@ const Footer = () => {
                         marginTop:'10px',
                         marginRight:'15px'
                     }}>
-                        <MainButton title={'Get Start'} onButtonClick={function (param: string): void {
-                            throw new Error('Function not implemented.');
-                        }} disabled={undefined} />
+                        <MainButton title={'Get Start'} onButtonClick={handleButtonClick} disabled={undefined} />
                     </Box>
                 </Box>
                 <Box sx={{
@@ -47,17 +51,17 @@ const Footer = () => {
                         <Box sx={{
                             paddingRight: '15px'
                         }}>
-                            <FaFacebookF size={40} />
+                            <FaFacebookF size={30} />
                         </Box>
                         <Box sx={{
                             paddingRight: '15px'
                         }}>
-                            <FaInstagram size={40} />
+                            <FaInstagram size={30} />
                         </Box>
                         <Box sx={{
                             paddingRight: '15px'
                         }}>
-                            <FaLinkedinIn size={40} />
+                            <FaLinkedinIn size={30} />
                         </Box>
 
                     </Box>
