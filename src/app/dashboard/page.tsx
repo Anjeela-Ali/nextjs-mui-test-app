@@ -16,7 +16,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { Container, Grid } from '@mui/material';
-import SunMoonSwitch from './CustomSwitch';
+import SunMoonSwitch from './ui/CustomSwitch';
 import CountdownTimer from '../(components)/CountDown';
 import { IoTicketOutline } from "react-icons/io5";
 
@@ -25,6 +25,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import MainButton from '../(components)/MainButton';
+import UpComingGames from './ui/UpComingGames';
 
 
 // Grid Responsiveness
@@ -362,7 +363,8 @@ export default function Dashboard(props: Props) {
             </Grid>
           </Box>
         </Container>
-
+          {/* Upcoming Games   */}
+          <UpComingGames />
       </Box>
     </Box>
   );
