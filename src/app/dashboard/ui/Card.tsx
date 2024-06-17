@@ -18,7 +18,8 @@ const Card = ({backgroundColor, boxShadow}:{
             {/* Heading */}
             <Typography sx={{
               fontSize: '14px',
-              padding: '10px 10px'
+              padding: '10px 10px',
+              fontFamily:'cursive'
             }}>
               Crypto
             </Typography>
@@ -35,7 +36,9 @@ const Card = ({backgroundColor, boxShadow}:{
             <Typography variant='h6' sx={{
                   padding:'15px 0',
                   fontSize:'13px',
-                  lineHeight:'33px'
+                  lineHeight:'33px',
+                  fontFamily:'Basement Grotesque',
+                  fontWeight:'400'
                 }}>
                 1 of 3 Session | 13min
                 </Typography>
@@ -47,7 +50,8 @@ const Card = ({backgroundColor, boxShadow}:{
                     textTransform:'capitalize',
                     color:'white',
                     padding:'0px 10px',
-                    marginBottom:'20px'
+                    marginBottom:'20px',
+                    fontFamily:'cursive'
                 }}>
                     Comming Soon
                 </Button>

@@ -276,7 +276,8 @@ const MenuBar = () => {
                         <MenuItem value="wallet">
                             <Box sx={{
                                 display: 'flex',
-                                alignItems: 'center',
+                                alignItems: 'center', fontFamily: 'Basement Grotesque',
+                                fontWeight: 400,
                             }}>
                                 <IoWalletOutline style={{ color: '#7CA9FF', marginRight: '8px' }} />
                                 <span>Wallet</span>
@@ -285,7 +286,8 @@ const MenuBar = () => {
                         <MenuItem value="logout">
                             <Box sx={{
                                 display: 'flex',
-                                alignItems: 'center',
+                                alignItems: 'center', fontFamily: 'Basement Grotesque',
+                                fontWeight: 400,
                             }}>
                                 <IoLogOutOutline style={{ color: '#7CA9FF', marginRight: '8px' }} />
                                 <span>Logout</span>

@@ -171,14 +171,19 @@ export default function Dashboard(props: Props) {
                   {/* Heading */}
                   <Typography sx={{
                     fontSize: '18px',
-                    padding: '10px 10px'
+                    padding: '10px 10px',
+                    
+                    fontFamily: 'Basement Grotesque',
+                    fontWeight: 400,
                   }}>
                     This game has 3 sessions
                   </Typography>
                   {/* LIst Item */}
                   <List sx={{
                     padding: '12px 10px',
-                    marginBottom: '35px'
+                    marginBottom: '35px',
+
+                    fontFamily:'cursive',
                   }}>
                     <ListItem sx={{
                       width: '80%',
@@ -241,7 +246,8 @@ export default function Dashboard(props: Props) {
                 <Typography variant='h6' sx={{
                   padding: '20px 10px',
                   fontSize: '24px',
-                  lineHeight: '33px'
+                  lineHeight: '33px', fontFamily: 'Basement Grotesque',
+                  fontWeight: 400,
                 }}>
                   1 of 3 Session | 13min
                 </Typography>
@@ -249,7 +255,8 @@ export default function Dashboard(props: Props) {
                 <Typography variant="body2" sx={{
                   fontSize: '20px',
                   lineHeight: '28px',
-                  paddingLeft: '10px'
+                  paddingLeft: '10px', fontFamily: 'Basement Grotesque',
+                  fontWeight: 400,
                 }}>
                   Pot Size
                 </Typography>

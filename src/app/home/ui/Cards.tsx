@@ -23,6 +23,7 @@ export default function MediaCard({
       <CardContent>
         <Typography gutterBottom variant="body2" component="div" sx={{
             fontFamily:'Basement Grotesque',
+            fontWeight:'700',
             fontSize:'18px'
         }}>
           {title}

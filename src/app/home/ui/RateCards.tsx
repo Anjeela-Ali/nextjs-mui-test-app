@@ -15,6 +15,7 @@ const   StatsCard = ({ number, text }:{
                 fontSize: { xs: '24px', sm: '36px', md: '40px' },
                 color: Colors.text.secondary,
                 fontFamily:'Basement Grotesque',
+                fontWeight:'700',
                 lineHeight:'62px'
             }}>
                 {number}

@@ -38,8 +38,9 @@ const CountdownTimer = ({ initialSeconds }:{
         <Box >
             <Box sx={{
                 display: 'flex',
-                fontSize: '34px',
-                justifyContent: 'center'
+                fontSize: '36px',
+                justifyContent: 'center',
+                fontFamily:'auto'
             }}>
                 Starting in {''}
                 <Box sx={{ color: timerStarted ? 'red':'yellow', paddingLeft:'10px' }}>
