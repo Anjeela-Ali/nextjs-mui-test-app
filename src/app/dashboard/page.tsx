@@ -143,13 +143,14 @@ export default function Dashboard(props: Props) {
         }}>
           {/* Heading */}
           <Typography variant='body2' sx={{
-            fontSize: '20px'
+            fontSize: '20px',
+            fontFamily:'auto'
           }}>
             Live Games
           </Typography>
           {/* Time and the cards */}
           <Box>
-            {/* countdown */}
+            {/* aucountdown */}
 
             <Box>
               <CountdownTimer initialSeconds={5} />
