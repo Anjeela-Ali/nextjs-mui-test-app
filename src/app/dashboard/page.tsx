@@ -33,15 +33,9 @@ import MenuBar from './ui/MenuBar';
 
 const drawerWidth = 220;
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
-  window?: () => Window;
-}
 
-export default function Dashboard(props: Props) {
+
+export default function Dashboard() {
 
   return (
     <Box sx={{ display: 'flex' }}>
